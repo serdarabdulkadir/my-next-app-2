@@ -20,8 +20,8 @@ import {
 } from 'lucide-react';
 
 const PromptCard = ({ prompt, capabilities }) => (
-  <div className=" rounded-lg flex flex-col h-full" id='Technologies'>
-    <p className="text-gray-300 mb-4 text-sm">"{prompt}"</p>
+  <div className="rounded-lg flex flex-col h-full" id='Technologiess'>
+    <p className="text-gray-300 mb-4 text-sm">{`"${prompt}"`}</p>
     <div className="flex flex-col space-y-2 mt-auto">
       {capabilities.map((cap, index) => (
         <span key={index} className="bg-[#212121] hover:bg-[#2c2b2b] text-white border border-gray-700 text-xs p-2 rounded-md text-center">
@@ -80,11 +80,8 @@ export default function TechnologiesPage() {
   ];
 
   return (
-    
-    <div className="bg-[#121212] text-gray-300 font-sans  relative">
-      <div className="relative text-white rounded-3xl   flex flex-col items-center justify-center text-center overflow-hidden" id="Pricing">
-      {/* Dekoratif yıldız ikonları */}
-
+    <div className="bg-[#121212] text-gray-300 font-sans relative" id='Technologies'>
+      <div className="relative text-white rounded-3xl   flex flex-col items-center justify-center text-center overflow-hidden">
       {/* Başlıklar */}
       <h2 className="text-4xl sm:text-5xl font-semibold mb-4 max-w-5xl">
             See Trending Prompts

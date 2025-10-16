@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const links = [
     ["About", "#About"],
@@ -19,15 +20,33 @@ export default function Navbar() {
 
   // ESC ile menüyü kapatma
   useEffect(() => {
-    const onKeyDown = (e) => {
+    const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setMenuOpen(false);
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
+  // Scroll olduğunda navbar efektleri
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 bg-black border-b border-neutral-800">
+    <nav
+      className={`w-full fixed top-0 left-0 z-50 border-b border-neutral-800 transition-all duration-300
+        ${scrolled ? "bg-black/80 backdrop-blur-sm shadow-lg shadow-neutral-500/40" : "bg-black"}
+      `}
+    >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 flex justify-between items-center h-16 md:h-20 relative">
         {/* Logo */}
         <div className="flex justify-center w-full md:absolute md:left-1/2 md:transform md:-translate-x-1/2 z-50">

@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-black text-gray-200 flex flex-col items-center justify-center px-6" id="About">
+    <main className="min-h-screen bg-black text-gray-200 flex flex-col items-center justify-center px-6 h-screen" id="About">
       <section className="max-w-6xl w-full text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
           Create more with <span className="text-white">Promptverse</span>

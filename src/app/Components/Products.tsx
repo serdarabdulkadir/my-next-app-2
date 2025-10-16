@@ -18,11 +18,10 @@ export default function ProductPage() {
     <div className="min-h-screen bg-black flex items-center justify-center p-8">
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-3">
         {/* Left large image */}
-        <div className="relative aspect-[4/3] md:aspect-auto md:h-[700px]">
+        <div className="relative aspect-[4/3] md:aspect-auto md:h-[700px] h-screen">
           <img src="Column.svg" alt="" />
         </div>
 
-        {/* Right side grid (4 small images) */}
         <div className="grid grid-cols-2 grid-rows-3 gap-4">
           <div className="relative aspect-square">
             <img src="Column1.svg" alt="" />

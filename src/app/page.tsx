@@ -31,7 +31,7 @@ export default function Home() {
           <TechnologiesPage />
         </section>
 
-        <section id="products" className="w-full">
+        <section id="products" className="w-full h-screen">
           <ProductPage />
         </section>
 

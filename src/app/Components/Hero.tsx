@@ -4,10 +4,13 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col text-center w-full bg-black text-white px-6 mt-40">
+    <section className="relative flex flex-col text-center text-white px-6 mt-40 w-screen ">
 
       {/* İçerik */}
-      <div className="absolute z-0 top-0 left-0">
+      <div className="absolute z-0 bottom-0 items-center flex">
+        <img src="Vector-1.svg" alt="" />
+      </div>
+      <div className="absolute z-0 bottom-0 items-center flex">
         <img src="Vector-3.svg" alt="" />
       </div>
       <div className="relative z-10">
@@ -23,10 +26,10 @@ export default function Hero() {
           Experience a stunning, futuristic design that boosts productivity.
         </p>
 
-        <div className="flex justify-center items-center gap-4">
+        <div className="flex justify-center items-center gap-4 mb-20">
           <Link
             href="#"
-            className="flex items-center gap-2 px-6 py-3 border border-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-100 hover:text-black transition"
+            className="flex items-center gap-2 px-6 py-3 border border-white rounded-full text-sm font-medium  transition"
           >
             Start Generating <img src="mdi_wand.svg" alt="" />
           </Link>
