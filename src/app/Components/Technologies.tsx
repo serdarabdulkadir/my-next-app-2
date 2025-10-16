@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client"; // Interaktif bileşenler için bu direktif gerekli
 import Link from "next/link";
 
@@ -21,7 +22,7 @@ import {
 
 const PromptCard = ({ prompt, capabilities }) => (
   <div className="rounded-lg flex flex-col h-full" id='Technologiess'>
-    <p className="text-gray-300 mb-4 text-sm">{`"${prompt}"`}</p>
+    <p className="text-gray-300 mb-4 text-sm">&quot;{prompt}&quot;</p>
     <div className="flex flex-col space-y-2 mt-auto">
       {capabilities.map((cap, index) => (
         <span key={index} className="bg-[#212121] hover:bg-[#2c2b2b] text-white border border-gray-700 text-xs p-2 rounded-md text-center">
